@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>18+ Age Verification</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-black relative">
+
+  <!-- Background -->
+  <div class="absolute inset-0 z-0">
+    <img src="steptodown.com104707.jpg" alt="background" class="w-full h-full object-cover opacity-40" />
+  </div>
+
+  <!-- Overlay Content -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 text-center px-4">
+    <!-- Icon -->
+    <div class="mb-6">
+      <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="9" cy="9" r="4" stroke="white" />
+        <circle cx="15" cy="15" r="4" stroke="white" />
+        <line x1="12" y1="12" x2="15" y2="9" stroke="white" />
+      </svg>
+    </div>
+
+    <!-- Text -->
+    <h1 class="text-2xl md:text-3xl font-bold mb-2">The site contains sexually explicit material.</h1>
+    <p class="text-sm mb-6">Enter <span class="font-semibold">ONLY</span> if you are over 18</p>
+
+    <!-- Buttons -->
+    <div class="flex gap-4">
+      <button onclick="enterSite()" class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-md font-semibold">
+        I am over 18
+      </button>
+      <button onclick="exitSite()" class="border border-white px-6 py-3 rounded-md font-semibold">
+        I am under 18
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function enterSite() {
+      // Redirect to homepage or main content
+      localStorage.setItem('enterSite', 'true');
+    window.location.href = "welcome.html"; // Change to your actual page
+    }
+
+    function exitSite() {
+      // Redirect to a safe page
+      window.location.href = "https://www.youtube.com/@PogoChannel";
+    }
+    function verifyAge() {
+    
+        }
+  </script>
+
+</body>
+</html>
